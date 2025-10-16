@@ -1,0 +1,6 @@
+flask
+psutil
+pytz
+minio
+pymongo
+rasa

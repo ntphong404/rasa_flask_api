@@ -1,0 +1,121 @@
+version: "3.1" 
+
+nlu:
+- intent: thank
+  examples: |
+    - cảm ơn
+    - cảm ơn nhiều
+    - thanks
+    - thank you
+    - tks
+
+- intent: ask_noi_dung_dieu_luat
+  examples: |
+    - Điều 2 Luật PCCC quy định gì?
+    - cho tôi xem điều 2 luật pccc
+    - LUẬT PCCC điều 5 nói gì
+    - dieu 3 luat pccc la gi
+    - Điều số 4 trong Luật PCCC là gì?
+    - ĐIỀU 6 - LUẬT PCCC 2024 !!!
+    - (Luật PCCC) điều 8 quy định sao vậy?
+    - luat pccc điều 9?
+    - Luật PCCC điều 10 nêu gì?
+    - điều 11 luật P.C.C.C nói j
+    - Luat pccc dieu 12 quy dinh gi?
+    - dieu13 luatpccc
+    - [Điều 15] (Luật PCCC)
+    - Luật pccc #dieu14
+    - Điều 5 của Nghị định 136 là gì?
+    - ND 136 điều 7 quy định sao?
+    - nghị định 136 điều 8 nói gì
+    - NGHỊ ĐỊNH 136/2020 điều 9
+    - dieu10 nghi dinh 136
+    - NĐ136 Điều 11 nói j
+    - nd 136 dieu 12
+    - (NĐ 136) điều 13 quy định gi?
+    - nghi dinh 136 dieu 14
+    - Điều 15 ND-136/2020/NĐ-CP là gì?
+    - Điều 1 Thông tư 149 nói gì?
+    - thong tu 149 dieu 2
+    - Thông tư số 149 điều 3 quy định gì
+    - dieu 4 thong tu 149/2020/tt-bca
+    - TT149 điều 5 là gì?
+    - t.t 149 dieu 6 quy dinh gi
+    - thong tu 149 dieu 7 noi gi
+    - TT-149 dieu 8
+    - (Thông tư 149) điều 9 quy định như thế nào?
+    - THONG TU 149 dieu10
+    - Cho tôi xem điều luật số 3 về PCCC
+    - Điều 4 trong văn bản PCCC mới nhất quy định gì?
+    - Tôi muốn biết nội dung điều 2 của luật phòng cháy
+    - Tra cứu điều 6 luật PCCC 2024
+    - Nội dung điều 7 là gì?
+    - Điều 8 nói về vấn đề gì?
+    - PCCC điều 9?
+    - Luật này điều 10?
+    - Điều 12 nêu gì vậy
+    - Hỏi điều 14 quy định gì trong luật
+
+- intent: trach_nhiem_bo_cong_an
+  examples: |
+    - Trách nhiệm của Bộ Công an trong PCCC là gì?
+    - Bo Cong an lam gi trong cong tac phong chay chua chay?
+    - Luật quy định Bộ Công an có nhiệm vụ gì về PCCC?
+    - Bộ Công an quản lý PCCC như thế nào?
+    - Nhiem vu cua Bo Cong an trong linh vuc phong chay la gi?
+    - Bo Cong an co vai tro gi trong hoat dong PCCC?
+    - Ai chu tri cong tac PCCC o Viet Nam?
+    - Luat PCCC noi gi ve Bo Cong an?
+    - Bộ Công an có trách nhiệm kiểm tra PCCC không?
+    - Bo cong an chiu trach nhiem gi khi xay ra chay lon?
+    - Nhiệm vụ của Cục Cảnh sát PCCC thuộc Bộ Công an là gì?
+    - Bo Cong an co nghia vu gi trong viec quan ly nha nuoc ve PCCC?
+    - Luật giao trách nhiệm gì cho Bộ Công an về PCCC?
+    - Bộ Công an có ban hành quy chuẩn kỹ thuật về PCCC không?
+    - Bo Cong an co phai huan luyen luc luong PCCC khong?
+    - Bo cong an phoi hop voi co quan nao trong viec PCCC?
+    - Bo cong an lam gi de quan ly PCCC toan quoc?
+    - Bộ Công an chịu trách nhiệm thế nào về phòng cháy chữa cháy?
+    - Luat co ghi ro vai tro cua Bo Cong an trong PCCC khong?
+    - Bo Cong an la co quan chu quan ve cong tac phong chay dung khong?
+
+- intent: noi_dung_ho_so_tham_duyet_thiet_ke_pccc
+  examples: |
+    - Hồ sơ thẩm duyệt PCCC cho thiết kế công trình gồm những gì?
+    - Cho mình hỏi khi thẩm duyệt PCCC phần thiết kế cần những tài liệu nào?
+    - Thẩm duyệt thiết kế PCCC gồm mấy loại hồ sơ
+    - hs tham duyet thiet ke pccc gom gi
+    - cần chuẩn bị hồ sơ gì khi nộp thiết kế công trình để duyệt PCCC
+    - PCCC thiết kế công trình cần tài liệu gì
+    - noi dung ho so tham duyet pccc doi voi thiet ke cong trinh
+    - ho so pccc thiet ke cong trinh la gi
+    - xin thẩm duyệt thiết kế công trình cần những giấy tờ về PCCC nào
+    - khi thiết kế công trình thì phần PCCC cần có gì
+    - trình tự và nội dung hồ sơ duyệt thiết kế PCCC
+    - tài liệu cần thiết để duyệt thiết kế về PCCC
+    - pccc thiet ke cong trinh co yeu cau gi ve ho so
+    - ho so tham duyet pccc cho thiet ke xd gom nhung gi
+    - duyệt thiết kế pccc cần nộp gì
+    - hồ sơ duyệt thiết kế công trình về pccc
+    - can nhung tai lieu gi de tham duyet pccc cho thiet ke
+    - nội dung hồ sơ thẩm duyệt thiết kế công trình về pccc
+
+- intent: noi_dung_ho_so_tham_duyet_phuong_tien_pccc
+  examples: |
+    - Hồ sơ thẩm duyệt PCCC cho phương tiện giao thông gồm những gì?
+    - Khi duyệt PCCC phương tiện cơ giới thì hồ sơ gồm gì
+    - cho hoi noi dung ho so tham duyet ve pccc doi voi phuong tien
+    - pccc phương tiện giao thông cần nộp hồ sơ gì
+    - hs tham duyet pccc phuong tien giao thong co yeu cau gi
+    - Thẩm duyệt PCCC cho tàu xe cần chuẩn bị hồ sơ gì
+    - cần giấy tờ gì để duyệt phương tiện cơ giới về PCCC
+    - nội dung hồ sơ duyệt PCCC của xe cộ là gì
+    - ho so tham duyet pccc phuong tien giao thong gom nhung tai lieu nao
+    - hồ sơ thẩm duyệt pccc cho ptgt
+    - xin duyệt PCCC cho xe, tàu, máy bay cần những gì
+    - noi dung ho so pccc doi voi phuong tien giao thong
+    - pccc pt co yeu cau gi ve ho so
+    - hồ sơ duyệt phương tiện cơ giới về pccc cần tài liệu nào
+    - các loại giấy tờ trong hồ sơ duyệt PCCC của phương tiện giao thông
+    - duyệt pccc phuong tien can gi
+    - ho so tham duyet ve pccc phuong tien co gi dac biet

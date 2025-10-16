@@ -1,0 +1,12 @@
+version: "3.1" 
+
+rules:
+- rule: nguoi_dun_cam_on
+  steps:
+    - intent: thank
+    - action: utter_thank
+
+- rule: tra_loi_noi_dung_dieu_luat
+  steps:
+    - intent: ask_noi_dung_dieu_luat
+    - action: action_read_law_section

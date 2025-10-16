@@ -1,0 +1,14 @@
+version: "3.1" 
+
+stories:
+- story: hoi_1_vai_cai
+  steps:
+  - intent: trach_nhiem_bo_cong_an
+  - action: action_read_law_section
+  - intent: noi_dung_ho_so_tham_duyet_phuong_tien_pccc
+  - action: utter_co_so_nguy_hiem_chay_no
+
+- story: a_ba
+  steps:
+  - intent: noi_dung_ho_so_tham_duyet_thiet_ke_pccc
+  - action: utter_nguyen_tac_pccc

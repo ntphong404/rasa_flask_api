@@ -1,0 +1,21 @@
+version: "3.1" 
+
+intents:
+  - thank
+  - ask_noi_dung_dieu_luat
+  - trach_nhiem_bo_cong_an
+  - noi_dung_ho_so_tham_duyet_thiet_ke_pccc
+  - noi_dung_ho_so_tham_duyet_phuong_tien_pccc
+
+responses:
+  utter_thank:
+    - text: "Bạn không có gì để cảm ơn! Nếu bạn có bất kỳ câu hỏi nào khác liên quan đến Học viện Kỹ thuật Mật Mã, hãy cho tôi biết. Tôi luôn sẵn sàng hỗ trợ bạn!"
+  utter_co_so_nguy_hiem_chay_no:
+  - text: |
+      Định nghĩa và quản lý cơ sở có nguy hiểm về cháy, nổ: xem Điều 2 (khái niệm) và các quy định yêu cầu đối với cơ sở tại Điều 23 (yêu cầu phòng cháy đối với cơ sở). Danh mục cụ thể cơ sở thuộc diện "nguy hiểm" do Chính phủ quy định.
+  utter_nguyen_tac_pccc:
+  - text: |
+      Nguyên tắc chung của hoạt động PCCC, cứu nạn, cứu hộ được quy định tại Điều 5 và Điều 7, bao gồm: lấy phòng ngừa làm chính; huy động toàn dân; chuẩn bị sẵn sàng lực lượng, phương tiện; thống nhất chỉ huy; ưu tiên cứu người; ứng dụng khoa học kỹ thuật; xử lý vi phạm nghiêm minh.
+
+actions:
+- action_read_law_section
