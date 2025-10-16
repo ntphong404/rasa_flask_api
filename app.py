@@ -9,6 +9,7 @@ import sys
 import threading
 import time
 import glob
+import requests
 from utils.api_response import ApiResponse
 from config import (
     ACTIONS_FILE, MODELS_DIR, SUPPORTED_MODEL_EXTENSIONS,
@@ -469,7 +470,6 @@ def run_actions():
 @app.route('/health', methods=['GET'])
 def health_check():
     try:
-        import requests
         from datetime import datetime
         
         # Kiểm tra Rasa server status
@@ -659,7 +659,6 @@ def upload_model():
         
         try:
             # Download file from URL
-            import requests
             
             print(f"Downloading model from URL: {model_url}")
             
@@ -804,6 +803,7 @@ def train_rasa_model():
                 file_content = """from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import requests
 
 
 """
@@ -970,6 +970,44 @@ def list_minio_models():
         return ApiResponse.error("Failed to list MinIO models", {
             "error": str(e)
         })
+
+# --- API: Chat with Rasa Webhook --- #
+@app.route('/chat', methods=['POST'])
+def chat_with_rasa():
+    try:
+        data = request.get_json()
+        if not data:
+            return ApiResponse.bad_request("Invalid JSON data")
+
+        message = data.get("message")
+        sender_id = data.get("sender_id", "default")
+
+        if not message or not isinstance(message, str):
+            return ApiResponse.bad_request("Missing or invalid 'message'")
+
+        # Rasa webhook URL
+        rasa_webhook_url = "http://localhost:5005/webhooks/rest/webhook"
+
+        # Send message to Rasa
+        response = requests.post(
+            rasa_webhook_url,
+            json={"sender": sender_id, "message": message},
+            timeout=5
+        )
+
+        if response.status_code == 200:
+            rasa_response = response.json()
+            return ApiResponse.success("Message processed successfully", {"responses": rasa_response})
+        else:
+            return ApiResponse.error(
+                f"Failed to process message. Rasa returned HTTP {response.status_code}",
+                {"response_text": response.text}
+            )
+
+    except requests.exceptions.RequestException as e:
+        return ApiResponse.error("Failed to connect to Rasa webhook", {"error": str(e)})
+    except Exception as e:
+        return ApiResponse.internal_error("Internal server error", {"error": str(e)})
 
 # --- Chạy Flask app --- #
 if __name__ == '__main__':
