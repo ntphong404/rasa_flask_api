@@ -8,6 +8,7 @@ services:
     container_name: rasa-flask-api
     ports:
       - "5000:5000"
+      - "5005:5005"
     volumes:
       - ./models:/app/models
       - ./data:/app/data
